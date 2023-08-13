@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übungen</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Übungen</h1>
+        <div id="exercises-list">
+            <!-- Hier werden die Übungen angezeigt -->
+        </div>
+        <form id="exercise-form">
+            <div class="mb-3">
+                <label for="exercise-type" class="form-label">Übungsart</label>
+                <select class="form-select" id="exercise-type" required>
+                    <option value="kraft">Kraftübung</option>
+                    <option value="cardio">Cardio</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="exercise-name" class="form-label">Übungsname</label>
+                <input type="text" class="form-control" id="exercise-name" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Übung hinzufügen</button>
+        </form>
+    </div>
+
+    <script src="day-script.js"></script>
+</body>
+</html>
