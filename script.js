@@ -30,7 +30,19 @@ function redirectToDayPage(index) {
     window.location.href = 'day.html';
 }
 
-// Initialisierung der Seite
-document.addEventListener('DOMContentLoaded', () => {
+function addDay() {
+    const dayName = prompt('Bitte gib einen Namen für den Tag ein:');
+    if (dayName) {
+        const days = JSON.parse(localStorage.getItem('gymDays')) || [];
+        days.push({ name: dayName, exercises: [] });
+        localStorage.setItem('gymDays', JSON.stringify(days));
+        displayDays();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
     displayDays();
+
+    const addDayButton = document.getElementById('add-day-btn');
+    addDayButton.addEventListener('click', addDay);
 });
